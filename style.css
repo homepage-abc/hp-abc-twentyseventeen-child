@@ -9,3 +9,17 @@ Version: 1.9.1545560187
 Updated: 2018-12-23 11:16:27
 
 */
+
+/* 
+Styling the Meta-Menu in the footer site-info class
+*/
+
+.site-info li {
+    list-style: none;
+    display: inline;
+}
+
+.site-info li:not(:first-child)::before {
+    content: '|';
+    padding: 0 0.5em;
+}

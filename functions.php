@@ -14,10 +14,9 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 // END ENQUEUE PARENT ACTION
 
-/*
-// add_filter( 'happyforms_enqueue_style', 'render_happyforms_styles', 10 );
+// Adding a Meta-Menu to be used instead of "proudly powered by" site-info.
 
-// function render_happyforms_styles() {
-// return false;
-// }
-*/
+function register_footer_menu() {
+    register_nav_menu('footer-menu',__( 'Footer Meta Menu' ));
+   }
+   add_action( 'init', 'register_footer_menu' );
